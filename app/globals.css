@@ -1,21 +1,37 @@
 @import "tailwindcss";
 
+/* *,
+*::before,
+*::after {
+  outline: 1px solid lime;
+} */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.root {
+  background-image: url(/assets/mobile/bg-pattern-header.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .root {
+    background-image: url(/assets/tablet/bg-pattern-header.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (min-width: 1025px) {
+  .root {
+    background-image: url(/assets/desktop/bg-pattern-header.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
   }
 }
 
